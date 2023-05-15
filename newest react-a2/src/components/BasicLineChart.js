@@ -3,6 +3,25 @@ import ReactEcharts from 'echarts-for-react';
 import React, { Component } from 'react';
 import { BasicLineChartButton } from './BasicLineChartButton';
 
+const data1 = {
+  labels: ["A", "B", "C", "D", "E"],
+  values1: [20, 30, 40, 50, 60],
+
+};
+
+const data2= {
+  labels: ["A", "B", "C", "D", "E"],
+  values1: [20, 30, 40, 50, 60],
+  
+};
+
+const data3 = {
+  labels: ["A", "B", "C", "D", "E"],
+  values1: [20, 30, 40, 50, 60],
+  
+};
+
+
 export class BasicLineChart extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +31,7 @@ export class BasicLineChart extends Component {
       currentData: null,
       data1: null,
       data2: null,
+      data3: null
     };
   }
 
@@ -23,13 +43,24 @@ export class BasicLineChart extends Component {
       currentData: null,
       data1: null,
       data2: null,
+      data3: null
     });
   };
 
-  handleDataFetched = (data1, data2) => {
+  handleDataFetched = (data1, data2, data3) => {
+    this.setState({
+      data1: data1,
+      data2: data2,
+      data3: data3,
+      showChart: true,
+    });
+  };
+
+  handleDataFetched = (data1, data2, data3) => {
     this.setState({
       data1,
       data2,
+      data3,
       showChart: true,
     });
   };
@@ -40,8 +71,9 @@ export class BasicLineChart extends Component {
     });
   };
 
+
   render() {
-    const { data1, data2, showChart, currentData } = this.state;
+    const { data1, data2,data3, showChart, currentData } = this.state;
 
     return (
       <div>
@@ -50,7 +82,7 @@ export class BasicLineChart extends Component {
             <ReactEcharts
               option={{
                 title: {
-                  text: 'SUDO Data',
+                  text: 'Unemployed',
                 },
                 xAxis: {
                   data: Object.values(data1)[0],
@@ -58,9 +90,14 @@ export class BasicLineChart extends Component {
                 yAxis: {},
                 series: [
                   {
-                    name: 'SUDO',
+                    name: Object.keys(data1)[0],
                     type: 'bar',
                     data: Object.values(Object.values(data1)[1]),
+                  },
+                  {
+                    name: Object.keys(data1)[1],
+                    type: 'bar',
+                    data: Object.values(Object.values(data1)[2]),
                   },
                 ],
               }}
@@ -70,7 +107,7 @@ export class BasicLineChart extends Component {
             <ReactEcharts
               option={{
                 title: {
-                  text: 'Twitter Data',
+                  text: 'Income',
                 },
                 xAxis: {
                   data: Object.values(data2)[0],
@@ -78,15 +115,48 @@ export class BasicLineChart extends Component {
                 yAxis: {},
                 series: [
                   {
-                    name: 'Twitter',
+                    name: Object.keys(data2)[0],
                     type: 'bar',
                     data: Object.values(Object.values(data2)[1]),
+                  },
+                  {
+                    name: Object.keys(data2)[1],
+                    type: 'bar',
+                    data: Object.values(Object.values(data2)[2]),
                   },
                 ],
               }}
               style={{ height: '400px', width: '100%' }}
               className={'react_for_echarts'}
+              
             />
+            <ReactEcharts
+              option={{
+                title: {
+                  text: 'Criminal',
+                },
+                xAxis: {
+                  data: Object.values(data3)[0],
+                },
+                yAxis: {},
+                series: [
+                  {
+                    name: Object.keys(data3)[0],
+                    type: 'bar',
+                    data: Object.values(Object.values(data3)[1]),
+                  },
+                  {
+                    name: Object.keys(data3)[1],
+                    type: 'bar',
+                    data: Object.values(Object.values(data3)[2]),
+                  },
+                ],
+              }}
+              style={{ height: '400px', width: '100%' }}
+              className={'react_for_echarts'}
+
+            />
+  
             <button onClick={this.handleChartClose}>Close</button>
           </>
         )}

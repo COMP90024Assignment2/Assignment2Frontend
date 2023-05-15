@@ -1,5 +1,11 @@
 .App {
-  background: papayawhip;
-  margin: 20px auto;
-  padding: 20px;
+  background: papayawhip;  
+  text-align: center;
+}
+
+.Map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
