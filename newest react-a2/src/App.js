@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
-import { BasicLineChart } from './components/BasicLineChart';
-import { BasicLineChartButton } from './components/BasicLineChartButton';
+import React from 'react';
+
+import  ScatterPlotButton  from './components/ScatterPlotButton';
 import HandwriteTitle from './components/HandwrittenTitle';
 import mapImage from './Map.png';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TwitterBarChart from './components/TwitterBarChart';
+import SUDOBarChart from './components/SUDOBarChart';
+
+
 
 
 
@@ -12,17 +16,54 @@ import mapImage from './Map.png';
 
 
 function App() {
+
   return (
-    <div className="App">
-      <HandwriteTitle text="Group25" />
-      <div className='Map'>
-        <img src={mapImage} alt="Map"/></div>
-      <BasicLineChart  />
-   
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/chart">Chart</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/chart" element={<Chart />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
-      
-    </div>
+function Home() {
+  return (
+    <>
 
+      <HandwriteTitle text="Group25 Exploring Economics Influences on Homelessness – Rental Prices, Mortgage Payment and Family Income" />
+      <div className="Map">
+        <img src={mapImage} alt="Map" />
+      </div>
+      <div id="content">
+         <p>The complexity of homelessness is deeply intertwined with economic factors such as housing affordability - including rental prices and mortgage payments - and family income. It is important to unveil the correlation and shed light on their interplay in the homelessness issue. And Twitter offers a wealth of diverse perspectives from individuals, organizations, and institutions, making it an invaluable resource for research. So this study aims to decipher these relationships from the twitter data within different areas in Australia and also compare the results to other official data.</p>
+      </div>
+    </>
+  );
+}
+
+function Chart() {
+  return(
+  <>
+     
+      <div className='Barchart'>
+      <TwitterBarChart/>
+      <SUDOBarChart/>
+      </div>
+      <ScatterPlotButton />
+    </>
   );
 }
 

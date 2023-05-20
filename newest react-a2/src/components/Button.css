@@ -1,13 +1,15 @@
 .button {
-    text-align: center;
+    
     padding: 10px 20px;
-    font-size: 16px;
+    margin-left: 1px;
+    font-size: 20px;
     font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
     text-align: center;
     text-decoration: none;
-    border-radius: 4px;
-    background-color: #f4b642;
-    color: #ffffff;
+    border-radius: 10px;
+    background-color: papayawhip;
+    color: black;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
