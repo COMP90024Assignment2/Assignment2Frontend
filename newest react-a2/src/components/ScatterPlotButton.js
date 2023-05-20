@@ -22,14 +22,14 @@ const ScatterPlotButton = () => {
             })
             .then(data => {
                 const response = {
-                    "Homeless": data.twitter_homeless,
-                    "Income": data.twitter_income,
-                    "Mortgage": data.twitter_mortgage,
-                    "Rental": data.twitter_rental
+                    "homeless": data.twitter_homeless,
+                    "income": data.twitter_income,
+                    "mortgage": data.twitter_mortgage,
+                    "rental": data.twitter_rental
                 };
                 setTwitterData({
                     x: response[dataType],
-                    y: response["Homeless"]
+                    y: response["homeless"]
                 });
                 setShowTwitterPlot(true);
             })
@@ -67,7 +67,7 @@ const ScatterPlotButton = () => {
         setShowSudoPlot(false);
     };
 
-    const buttonNames = ["Income", "Mortgage", "Rental"];
+    const buttonNames = ["income", "mortgage", "rental"];
 
     let twitterGradient, twitterYIntercept, sudoGradient, sudoYIntercept;
 
