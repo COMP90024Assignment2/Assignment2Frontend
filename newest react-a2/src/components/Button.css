@@ -1,26 +1,36 @@
 .button {
-    
-    padding: 10px 20px;
-    margin-left: 1px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: papayawhip;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  margin-left: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: papayawhip;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.button:hover,
+.button.active {
+  background-color: #d5910b;
+}
+
+.button:active {
+  background-color: #e1ab08;
+}
+
+
+.plot-container {
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;  
   }
-  
-  .button:hover {
-    background-color: #d5910b;
-  }
-  
-  .button:active {
-    background-color: #e1ab08;
-  }
-  
+.plot {
+    width: 45%; 
+    box-sizing: border-box;  
+}
+

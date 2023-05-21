@@ -1,22 +1,16 @@
 import './App.css';
 import React from 'react';
-
-import  ScatterPlotButton  from './components/ScatterPlotButton';
 import HandwriteTitle from './components/HandwrittenTitle';
 import mapImage from './Map.png';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TwitterBarChart from './components/TwitterBarChart';
 import SUDOBarChart from './components/SUDOBarChart';
-
-
-
-
-
-
+import  ScatterPlotButton  from './components/ScatterPlotButton';
+import LineChartComponent from './components/LineChartComponent';
 
 
 function App() {
-
+  
   return (
     <Router>
       <div className="App">
@@ -40,9 +34,9 @@ function App() {
 }
 
 function Home() {
+
   return (
     <>
-
       <HandwriteTitle text="Group25 Exploring Economics Influences on Homelessness – Rental Prices, Mortgage Payment and Family Income" />
       <div className="Map">
         <img src={mapImage} alt="Map" />
@@ -56,13 +50,14 @@ function Home() {
 
 function Chart() {
   return(
-  <>
-     
-      <div className='Barchart'>
+  <>   
+      <div className='Chart'>
       <TwitterBarChart/>
       <SUDOBarChart/>
       </div>
+
       <ScatterPlotButton />
+      <LineChartComponent />
     </>
   );
 }

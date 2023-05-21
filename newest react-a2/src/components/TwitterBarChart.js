@@ -28,7 +28,7 @@ export default function TwitterBarChart() {
       },
       xAxis: {
         type: 'category',
-        data: ['1gsyd', '2gmel', '3gbri', '4gade', '5gper', '6ghob', '7gdar', '8acte', 'Null']
+        data: ['1gsyd', '2gmel', '3gbri', '4gade', '5gper', '6ghob', '7gdar', '8acte', 'Nan']
       },
       yAxis: {
         type: 'value'
@@ -80,7 +80,7 @@ export default function TwitterBarChart() {
           emphasis: {
             focus: 'series'
           },
-          data: [150, 212, 201, 154, 190, 330, 410]
+          data: [5729,5399,2671,1148,1702,346,218,598,6909]
         }
       ]
     };
