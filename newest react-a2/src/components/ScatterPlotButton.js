@@ -146,7 +146,7 @@ const ScatterPlotButton = () => {
                                 ]}
                                 layout={{
                                     autosize: true,
-                                    title: 'Scatter plot with regression line (Twitter Data)',
+                                    title: 'Correlation of Tweet Count on Homelessness and ' + dataType,
                                     xaxis: { title: 'Twitter_'+dataType },
                                     yaxis: { title: 'Twitter_Homeless' },
                                 }}
@@ -184,7 +184,7 @@ const ScatterPlotButton = () => {
                                 ]}
                                 layout={{
                                     autosize: true,
-                                    title: 'Scatter plot with regression line (Sudo Data)',
+                                    title: 'Correlation of Homeless Count and ' + dataType,
                                     xaxis: { title: 'SUDO_'+dataType },
                                     yaxis: { title: 'SUDO_homeless' },
                                 }}
