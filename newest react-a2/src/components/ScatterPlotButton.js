@@ -77,6 +77,7 @@ const ScatterPlotButton = () => {
     };
 
     const hidePlots = () => {
+        setActiveButton(false)
         setShowTwitterPlot(false);
         setShowSudoPlot(false);
     };
@@ -194,7 +195,7 @@ const ScatterPlotButton = () => {
                     )}
                 </div>
                 <div id="content">
-                <p>{displayText}</p> {}
+                <h4>{displayText}</h4> {}
                 </div>
                
                 <button onClick={hidePlots} className='button'>

@@ -18,35 +18,35 @@ const HandwrittenTitle = ({ text }) => {
             <div>
               <img src={member1Image} alt="Member" />
               <h3>Shengnan Wang</h3>
-              <h4>Ansible</h4>
+              <h5>Ansible</h5>
             </div>
           </li>
           <li>
             <div>
               <img src={member2Image} alt="Member" />
               <h3>Yuxin Han</h3>
-              <h4>Data</h4>
+              <h5>Data</h5>
             </div>
           </li>
           <li>
             <div>
               <img src={member3Image} alt="Member" />
               <h3>Minghan Xue</h3>
-              <h4>Data</h4>
+              <h5>Data</h5>
             </div>
           </li>
           <li>
             <div>
               <img src={member4Image} alt="Member" />
               <h3>Jia Zhao</h3>
-              <h4>Frontend</h4>
+              <h5>Frontend</h5>
             </div>
           </li>
           <li>
             <div>
               <img src={member5Image} alt="Member" />
               <h3>Jionghao Chen</h3>
-              <h4>Backend</h4>
+              <h5>Backend</h5>
             </div>
           </li>
         </ul>

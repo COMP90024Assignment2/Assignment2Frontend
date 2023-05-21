@@ -5,13 +5,13 @@ export default function SUDOBarChart() {
   const getOption = () => {
     return {
       title: {
-        text: 'SUDO', // Add your desired title here
+        text: 'SUDO', 
         textStyle: {
           fontWeight: 'normal',
           fontSize: 16,
         },
         left: 'center',
-        top: '5%', // Adjust the top position as needed
+        top: '5%', 
       },
       tooltip: {
         trigger: 'axis',
@@ -72,7 +72,7 @@ export default function SUDOBarChart() {
           data: [2427.0,2000.0,1863.0,1562.0,1907.0,1517.0,2100.0,2080.0,1479.75]
         },
         {
-          name: 'Rental',
+          name: 'Rent',
           type: 'bar',
           stack: 'total',
           label: {

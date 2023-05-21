@@ -71,7 +71,7 @@ export default function TwitterBarChart() {
           data: [619, 284, 156, 123, 74, 14, 6, 29, 635]
         },
         {
-          name: 'Rental',
+          name: 'Rent',
           type: 'bar',
           stack: 'total',
           label: {

@@ -55,26 +55,23 @@ nav::after {
 }
 
 #content {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-p {
+h4 {
+  font-weight: normal;
   font-size: 22px;
   line-height: 1.2;
   margin-bottom: 15px;
-
   background: linear-gradient(to right, #ea7508, #2d649f);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
-
 }
 
-p::first-letter {
+h4::first-letter {
   font-size: 50px;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
