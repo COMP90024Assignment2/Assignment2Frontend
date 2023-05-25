@@ -26,7 +26,6 @@ const LineChartComponent = () => {
       console.error('There has been a problem with your fetch operation:', error);
     }
   };
-
   const handleClick = () => {
     setIsActive(true);
     const fetchDataForAllUrls = async () => {
@@ -51,12 +50,18 @@ const LineChartComponent = () => {
 
       transformedData.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-      setData(transformedData);
+      // Filter the data to show only the dates after 2020-05-19
+      const filteredData = transformedData.filter(
+        item => new Date(item.date) > new Date("2023-05-19")
+      );
+
+      setData(filteredData);
       setShowPlot(true);
     };
 
     fetchDataForAllUrls();
 };
+
 
 
   const hidePlot = () => {
